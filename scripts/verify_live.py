@@ -32,9 +32,9 @@ def read(c,acct,address,fn,args=None):
 def write(c,address,fn,args):
     tx=c.write_contract(address=address,function_name=fn,args=args,value=0); print(fn,tx,flush=True); wait(c,tx,fn); return str(tx)
 def main():
-    root=os.path.dirname(os.path.dirname(__file__)); desktop=os.path.dirname(os.path.dirname(root))
-    primary=account(env_value(os.path.join(os.path.dirname(root),".env"),"GENLAYER_PRIVATE_KEY"))
-    contractor=account(env_value(os.path.join(desktop,"sansh genlayer","accounts.env"),"ACCOUNT_1_GENLAYER_PRIVATE_KEY"))
+    root=os.path.dirname(os.path.dirname(__file__)); shared_env=os.path.join(os.path.dirname(root),".env")
+    primary=account(env_value(shared_env,"GENLAYER_PRIVATE_KEY"))
+    contractor=account(env_value(shared_env,"GENLAYER_SECONDARY_PRIVATE_KEY"))
     pc,cc=client(primary),client(contractor); address=json.load(open(os.path.join(root,"deployment.json")))["address"]; txs=[]
     txs.append(write(pc,address,"create_project",[contractor.address,"Analytics dashboard","Build a responsive analytics dashboard for the client's existing reporting API.","Deliver dashboard views, date and region filters, CSV export, tests, and deployment documentation.","Native mobile apps, payment processing, and reporting API changes are excluded."]))
     stats=read(pc,primary,address,"get_stats"); pid="scope-"+str(stats["projects"])

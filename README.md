@@ -45,7 +45,7 @@ The suite covers party binding, single-use included-work authority, bilateral ch
 
 ## Deploy
 
-Set `GENLAYER_PRIVATE_KEY` in `.env`, then run `python scripts/deploy.py`. The script targets Bradbury, waits for a successful consensus status, and writes `deployment.json`.
+Set `GENLAYER_PRIVATE_KEY` in the shared `.env`, then run `python scripts/deploy.py`. For the two-party live verification, also set a separately funded `GENLAYER_SECONDARY_PRIVATE_KEY`, then run `python scripts/verify_live.py`. The scripts target Bradbury.
 
 ScopeLock does not hold funds or enforce payment. It produces auditable work authorization receipts that other contracts, agents, or off-chain workflows can consume.
 
