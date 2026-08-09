@@ -2,6 +2,8 @@
 
 ScopeLock is a reusable semantic change-control primitive for GenLayer. A client and contractor sign one immutable project baseline. Every later work request is judged against that baseline and becomes either immediately authorized included work, a bilateral change order, or a rejected out-of-scope request.
 
+**Bradbury deployment:** [`0x76Be...fEDD`](https://explorer-bradbury.genlayer.com/address/0x76Be273A43a5032dcc7Df16E97599E38fEf9fEDD) · [deployment transaction](https://explorer-bradbury.genlayer.com/tx/0x7707d4243c36a89a29b7c83c73ac0ac99b4359d5db25ba4b56e25e2b13f66a5c)
+
 ## Why this needs an Intelligent Contract
 
 Real scope is written in meaning, not function selectors. "Add filters listed in the dashboard deliverables" and "build native mobile apps" may use the same technology but create completely different obligations. GenLayer validators independently compare each request with the signed scope, deliverables, and exclusions, then agree on the gate and bounded cost, time, and risk impacts.
@@ -43,7 +45,7 @@ The suite covers party binding, single-use included-work authority, bilateral ch
 
 ## Deploy
 
-Set `GENLAYER_PRIVATE_KEY` in `.env`, then run `python scripts/deploy.py`. The script targets Studionet, waits for a successful consensus status, and writes `deployment.json`.
+Set `GENLAYER_PRIVATE_KEY` in `.env`, then run `python scripts/deploy.py`. The script targets Bradbury, waits for a successful consensus status, and writes `deployment.json`.
 
 ScopeLock does not hold funds or enforce payment. It produces auditable work authorization receipts that other contracts, agents, or off-chain workflows can consume.
 
