@@ -2,7 +2,9 @@
 
 ScopeLock is a reusable semantic change-control primitive for GenLayer. A client and contractor sign one immutable project baseline. Every later work request is judged against that baseline and becomes either immediately authorized included work, a bilateral change order, or a rejected out-of-scope request.
 
-**Bradbury deployment:** [`0x76Be...fEDD`](https://explorer-bradbury.genlayer.com/address/0x76Be273A43a5032dcc7Df16E97599E38fEf9fEDD) · [deployment transaction](https://explorer-bradbury.genlayer.com/tx/0x7707d4243c36a89a29b7c83c73ac0ac99b4359d5db25ba4b56e25e2b13f66a5c)
+**Bradbury deployment:** [`0x2247...7796`](https://explorer-bradbury.genlayer.com/address/0x2247105dcE242fDE249e0b994245440ab57C7796) · [deployment transaction](https://explorer-bradbury.genlayer.com/tx/0xee0d08958c46ea1f9dbd9b902371a3256a4c2dacac049b38891688ab08ece513)
+
+**Verified live lifecycle:** [create project](https://explorer-bradbury.genlayer.com/tx/0x2a53eb8025114caa9fa74d360629ff1323d2c39df9a0137b747ad6158bd28b01) · [contractor acceptance](https://explorer-bradbury.genlayer.com/tx/0xfe06c37d8f29154bce7ea11127b0c0922df5cc27f78ede62f04811605d91c201) · [consensus change order](https://explorer-bradbury.genlayer.com/tx/0x4273c0ae144c6b6197d1a591c016a6379a329230304ea7070120ca5b3769e994) · [client approval](https://explorer-bradbury.genlayer.com/tx/0x8161e28dc6fd39dded2ee7ee2a91643bc812eda258c9462e004a560b7b9bdb96) · [contractor approval](https://explorer-bradbury.genlayer.com/tx/0x9f86d287f2d19a78bd75ca25faf4bd6699d7b3771aec536a77bdefff0479c683) · [single-use consumption](https://explorer-bradbury.genlayer.com/tx/0x3cc826c3a101e05b0211bfb22ee264e782fdec8fe321d53976d885a91144fd33)
 
 ## Why this needs an Intelligent Contract
 

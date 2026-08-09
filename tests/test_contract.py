@@ -26,7 +26,7 @@ def test_in_scope_authorization_is_single_use(direct_vm,direct_deploy,direct_ali
 def test_change_order_requires_both_signatures(direct_vm,direct_deploy,direct_alice,direct_bob):
     c=direct_deploy(CONTRACT); pid=project(c,direct_vm,direct_alice,direct_bob); direct_vm.sender=direct_bob
     direct_vm.mock_llm("SCOPE LOCK",verdict("CHANGE_ORDER",70,65,45))
-    cid=c.request_change(pid,"mobile-1","Add native iOS and Android applications with offline synchronization.","The client requested a new mobile distribution channel.")
+    cid=c.request_change(pid,"collab-1","Add real-time collaborative annotations, presence indicators, and comment resolution to every dashboard view.","The client requested a related collaboration module that materially expands the signed dashboard deliverables.")
     direct_vm.clear_mocks(); assert not c.is_authorized(cid)
     direct_vm.sender=direct_alice; c.approve_change_order(cid); assert not c.is_authorized(cid)
     direct_vm.sender=direct_bob; approved=c.approve_change_order(cid); assert approved["status"]=="AUTHORIZED" and c.is_authorized(cid)

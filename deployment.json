@@ -1,7 +1,7 @@
 {
   "network": "bradbury",
   "chainId": 4221,
-  "tx": "0x7707d4243c36a89a29b7c83c73ac0ac99b4359d5db25ba4b56e25e2b13f66a5c",
-  "address": "0x76Be273A43a5032dcc7Df16E97599E38fEf9fEDD",
+  "tx": "0xee0d08958c46ea1f9dbd9b902371a3256a4c2dacac049b38891688ab08ece513",
+  "address": "0x2247105dcE242fDE249e0b994245440ab57C7796",
   "explorer": "https://explorer-bradbury.genlayer.com"
 }

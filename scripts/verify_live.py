@@ -39,7 +39,7 @@ def main():
     txs.append(write(pc,address,"create_project",[contractor.address,"Analytics dashboard","Build a responsive analytics dashboard for the client's existing reporting API.","Deliver dashboard views, date and region filters, CSV export, tests, and deployment documentation.","Native mobile apps, payment processing, and reporting API changes are excluded."]))
     stats=read(pc,primary,address,"get_stats"); pid="scope-"+str(stats["projects"])
     txs.append(write(cc,address,"accept_project",[pid]))
-    txs.append(write(pc,address,"request_change",[pid,"live-change-1","Add native iOS and Android applications with offline synchronization.","The client requested an additional mobile distribution channel after signing the dashboard scope."]))
+    txs.append(write(pc,address,"request_change",[pid,"live-change-1","Add real-time collaborative annotations, presence indicators, and comment resolution to every dashboard view.","The client requested a related collaboration module that materially expands the signed dashboard deliverables."]))
     stats=read(pc,primary,address,"get_stats"); cid="change-"+str(stats["changes"]); change=read(pc,primary,address,"get_change",[cid])
     if change["gate"]!="CHANGE_ORDER": raise RuntimeError("Expected CHANGE_ORDER, got "+change["gate"])
     txs.append(write(pc,address,"approve_change_order",[cid])); txs.append(write(cc,address,"approve_change_order",[cid]))
